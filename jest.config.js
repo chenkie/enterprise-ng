@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/apps/prisma-demo'],
+  projects: ['<rootDir>/apps/prisma-demo', '<rootDir>/apps/api'],
 };

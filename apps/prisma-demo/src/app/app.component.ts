@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DataServiceService } from './data-service.service';
+import { Post } from '@prisma/client';
 
 @Component({
   selector: 'ng-conf-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'prisma-demo';
+  public posts: Observable<Post[]>;
+  constructor(private dataService: DataServiceService) {}
+
+  getData() {
+    this.posts = this.dataService.getPosts();
+  }
 }

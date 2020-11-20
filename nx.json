@@ -29,6 +29,9 @@
     "prisma-demo-e2e": {
       "tags": [],
       "implicitDependencies": ["prisma-demo"]
+    },
+    "api": {
+      "tags": []
     }
   }
 }
